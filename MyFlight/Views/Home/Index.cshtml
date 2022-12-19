@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div
+     <br /><br />
+     <h1>Find Your Flight</h1>
+    <br /><br />
+     <label> Origin:</label>
+        <input id="orText" TYPE="text" value="" name="Text1">
+
+        <label>Destination:</label>
+        <input id="dText" TYPE="text" value="" name="Text1"> <br /><br />
+
+
+        <label>Flight date:</label>
+        <input type="date" id="start" name="trip-start" placeholder="dd-mm-yyyy"
+               value="10-12-2022"
+               min="01-12-2022" max="31-01-2023">
+        <label>Return date:</label>
+        <input type="date" id="start" name="trip-end" placeholder="dd-mm-yyyy"
+               value="10-12-2022"
+               min="01-12-2022" max="31-01-2023">
+
+        <label>Time of flight:</label>
+        <select name="hour" id="hour">
+            <option value="morning">Morning</option>
+            <option value="noon">Noon</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="night">Night</option>
+
+        </select>
+        <br />
+        <br />
+
+        <label>Number of pessengers:</label>
+        <select name="pessengers" id="pessengers">
+            <option value="v1">1</option>
+            <option value="v2">2</option>
+            <option value="v3">3</option>
+            <option value="v4">4</option>
+            <option value="v5">5</option>
+
+        </select>
+
+        <label>Minimum price flight</label>
+        <input id="minPriceText" TYPE="text" value="" name="Text1">
+
+        <label>Maximum price flight</label>
+        <input id="maxPriceText" TYPE="text" value="" name="Text1">
+        <br />
+        <br />
+
+
+
+        <input type="radio" id="one_way" name="flight type" value="One way flight">
+        <label for="one_way">One way flight</label><br>
+        <input type="radio" id="two_way" name="flight type" value="Two way flight">
+        <label for="two_way">Two way flight</label><br>
+        <br />
+        <br />
+
+        <input id="fSubmit" type="submit" value="Search flight" name="Submit1">
+</div>
