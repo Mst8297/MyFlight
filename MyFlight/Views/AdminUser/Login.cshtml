@@ -5,13 +5,14 @@
 
 <h1>Login</h1>
 
-@using (Html.BeginForm("Login", "AdminUser", FormMethod.Post))
-{
-    <label>User name</label>
-    @Html.TextBoxFor(model => model.UserName)
+<form action="Submit" method="post">
+    <label>User name:</label> <br />
+    <input type="text" value="@Model.UserName" name="username" />  @Html.ValidationMessageFor(x => x.UserName)  <br />
 
-    <label>Password</label>
-    @Html.TextBoxFor(model => Model.Password)
-    <input type="submit" value="Submit" />
-}
 
+    <label>Password:</label><br />
+    <input type="text" value="@Model.Password" name="password" />  @Html.ValidationMessageFor(x => x.Password)<br />
+
+    <input type="submit" value="Go" />
+
+</form>

@@ -14,7 +14,7 @@ namespace MyFlight.Models
         
 
         [Required(ErrorMessage = "Password is required")]
-        [StringLength(5)]
+        [StringLength(8)]
         public string Password { get; set; }
     }
 }

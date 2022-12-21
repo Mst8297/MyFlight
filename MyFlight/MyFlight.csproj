@@ -181,7 +181,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\AdminUser\FlightListEdit.cshtml" />
     <Content Include="Views\AdminUser\Login.cshtml" />
-    <Content Include="Views\AdminUser\Submit.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

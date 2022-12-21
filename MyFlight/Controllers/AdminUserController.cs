@@ -26,38 +26,32 @@ namespace MyFlight.Controllers
         public ActionResult Login()
         {
             AdminUser au = new AdminUser();
-            return View("Submit", au);
-            
-              
+            return View("Login", au);
+
+
         }
 
         public ActionResult Submit(AdminUser au)
         {
-            if (ModelState.IsValid)
+            if (au.UserName != null && au.Password != null)
             {
-                if (au.UserName == "Admin" && au.Password == "Admin123")
+                if (au.UserName.Equals("Admin") && au.Password.Equals("Admin123"))
                 {
                     return View("FlightListEdit");
                 }
                 else
                 {
                     MessageBox.Show("The user name or password is not correct, please try again!", "Wrong values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return View();
+                    return View("Login", au);
                 }
-
-
             }
             else
-            {
-                MessageBox.Show("The user name or password is not correct, please try again!", "Wrong values", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return View();
-            }
+                return View("Login", au);
+
+
+
 
         }
-        public ActionResult GetPopUp(int id)
-        {
-            // Communication with the model
-            return View("UserControl/PopupView"); // The defined View in the project
-        }
+
     }
 }
